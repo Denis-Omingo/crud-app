@@ -1,0 +1,18 @@
+:root{
+    --primary:rgba(13, 25, 200, 0.908);
+    --secondary:rgb(234, 82, 18);
+}
+
+.navbar .container .navbar-brand{
+    color: var(--primary);
+    font-size: 2em !important;
+}
+.navbar-nav{
+    padding-left: 5rem;
+}
+.nav-item{
+    padding-left: 2rem;
+}
+.nav-item .nav-link{
+    color:orange;
+}

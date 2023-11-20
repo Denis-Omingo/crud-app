@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "name": "Smartphone",
+      "brand": "Tecno Spark 8",
+      "category": "Accessories",
+      "price": "20000",
+      "instock": "2",
+      "description": "vfg",
+      "createdAt": "2023-11-17",
+      "id": 1
+    },
+    {
+      "name": "Laptop",
+      "brand": "Lenovo",
+      "category": "Computers",
+      "price": "30,000",
+      "instock": "56",
+      "description": "dtfsagdyhxicfu",
+      "createdAt": "2023-11-19",
+      "id": 2
+    }
+  ]
+}
