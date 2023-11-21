@@ -53,18 +53,18 @@ function ProductList(props){
             <h2 className="text-center mb-3">List of Products</h2>
             <button onClick={()=>props.showForm({})} type='button' className='btn btn-primary me-2 '>Create</button>
             <button onClick={()=>fetchProducts()} type='button' className='btn btn-outline-primary me-2 my-2'>Refresh</button>
-            <div className='container'>
-            <table className='table bg-warning'>
+            <div className=' sm-container-fluid'>
+            <table className='table bg-warning sm-container-fluid'>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Brand</th>
-                        <th>Category</th>
-                        <th>Price/Unit</th>
-                        <th>Available</th>
-                        <th>Date</th>
-                        <th>Action </th>
+                        <th className='fs pe-0'>ID</th>
+                        <th className='pe-0'>Name</th>
+                        <th className='pe-0'>Brand</th>
+                        <th className='pe-0'>Category</th>
+                        <th className='pe-0'>Price/Unit</th>
+                        <th className='pe-0'>Available</th>
+                        <th className='d-none d-md-inline-flex pe-0'>Date</th>
+                        <th className='pe-0'>Action </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,13 +72,13 @@ function ProductList(props){
                         products.map((product,index)=>{
                             return(
                                 <tr key={index}>
-                                    <td>{product.id}</td>
-                                    <td>{product.name}</td>
-                                    <td>{product.brand}</td>
-                                    <td>{product.category}</td>
-                                    <td>Ksh. {product.price}</td>
-                                    <td>{product.instock} units</td>
-                                    <td>{product.createdAt}</td>
+                                    <td className='pe-0'>{product.id}</td>
+                                    <td className='pe-0'>{product.name}</td>
+                                    <td className='pe-0'>{product.brand}</td>
+                                    <td className='pe-0'>{product.category}</td>
+                                    <td className='pe-0'>Ksh. {product.price}</td>
+                                    <td className='pe-0'>{product.instock} units</td>
+                                    <td className='d-none d-md-inline-flex pe-0'>{product.createdAt}</td>
                                     <td style={{width:"10px", whiteSpace:"nowrap"}}>
                                             <button onClick={()=>props.showForm(product)} type='button' className='btn btn-primary btn-sm me-2'>Edit</button>
                                             <button  onClick={()=>deleteProduct(product.id)} type='button' className='btn btn-danger btn-sm me-2'>Delete</button>
