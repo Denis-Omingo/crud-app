@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Fragment } from 'react';
 
 export function Products() {
     const [content, setContent] =useState(<ProductList showForm={showForm}/>);
@@ -48,10 +49,11 @@ function ProductList(props){
     }
 
     return(
-        <>
+        <Fragment className='container'>
             <h2 className="text-center mb-3">List of Products</h2>
             <button onClick={()=>props.showForm({})} type='button' className='btn btn-primary me-2 '>Create</button>
             <button onClick={()=>fetchProducts()} type='button' className='btn btn-outline-primary me-2 my-2'>Refresh</button>
+            <div className='container'>
             <table className='table bg-warning'>
                 <thead>
                     <tr>
@@ -59,9 +61,9 @@ function ProductList(props){
                         <th>Name</th>
                         <th>Brand</th>
                         <th>Category</th>
-                        <th>Price Per Unit</th>
-                        <th>In Stock</th>
-                        <th>Updated At</th>
+                        <th>Price/Unit</th>
+                        <th>Available</th>
+                        <th>Date</th>
                         <th>Action </th>
                     </tr>
                 </thead>
@@ -87,7 +89,8 @@ function ProductList(props){
                     }
                 </tbody>
             </table>
-        </>
+            </div>
+        </Fragment>
     );
 }
 
