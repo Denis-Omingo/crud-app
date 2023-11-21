@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Fragment } from 'react';
+import '../styles/products.css'
 
 export function Products() {
     const [content, setContent] =useState(<ProductList showForm={showForm}/>);
@@ -49,36 +49,36 @@ function ProductList(props){
     }
 
     return(
-        <Fragment className='container'>
+        <>
             <h2 className="text-center mb-3">List of Products</h2>
             <button onClick={()=>props.showForm({})} type='button' className='btn btn-primary me-2 '>Create</button>
             <button onClick={()=>fetchProducts()} type='button' className='btn btn-outline-primary me-2 my-2'>Refresh</button>
-            <div className=' sm-container-fluid'>
-            <table className='table bg-warning sm-container-fluid'>
-                <thead>
+            <div className='container'>
+            <table className='table bg-secondary sm-container-fluid'>
+                <thead className='container'>
                     <tr>
-                        <th className='fs pe-0'>ID</th>
+                        <th className='title pe-0'>ID</th>
                         <th className='pe-0'>Name</th>
                         <th className='pe-0'>Brand</th>
                         <th className='pe-0'>Category</th>
-                        <th className='d-none d-md-inline-flex pe-0'>Price/Unit</th>
+                        <th className='pe-0'>Price/Unit</th>
                         <th className='pe-0'>Available</th>
-                        <th className='d-none d-md-inline-flex pe-0'>Date</th>
+                        <th className='pe-0'>Date</th>
                         <th className='pe-0'>Action </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='container'>
                     {
                         products.map((product,index)=>{
                             return(
                                 <tr key={index}>
-                                    <td className='pe-0'>{product.id}</td>
-                                    <td className='pe-0'>{product.name}</td>
-                                    <td className='pe-0'>{product.brand}</td>
-                                    <td className='pe-0'>{product.category}</td>
-                                    <td className='d-none d-md-inline-flex pe-0'>Ksh. {product.price}</td>
-                                    <td className='pe-0'>{product.instock} units</td>
-                                    <td className='d-none d-md-inline-flex pe-0'>{product.createdAt}</td>
+                                    <td className='fs-sm-1 text-light'>{product.id}</td>
+                                    <td className='text-warning'>{product.name}</td>
+                                    <td className='text-light'>{product.brand}</td>
+                                    <td className=''>{product.category}</td>
+                                    <td className='text-light'>Ksh. {product.price}</td>
+                                    <td className=''>{product.instock}</td>
+                                    <td className='text-light'>{product.createdAt}</td>
                                     <td style={{width:"10px", whiteSpace:"nowrap"}}>
                                             <button onClick={()=>props.showForm(product)} type='button' className='btn btn-primary btn-sm me-2'>Edit</button>
                                             <button  onClick={()=>deleteProduct(product.id)} type='button' className='btn btn-danger btn-sm me-2'>Delete</button>
@@ -90,7 +90,7 @@ function ProductList(props){
                 </tbody>
             </table>
             </div>
-        </Fragment>
+        </>
     );
 }
 

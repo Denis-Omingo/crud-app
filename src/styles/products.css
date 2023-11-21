@@ -1,0 +1,29 @@
+
+
+.table {
+    width: 100%;
+}
+
+.table th,
+.table td {
+    font-size: 1rem; 
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+    .table {
+        width: 100%; 
+        overflow-x: auto; 
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.5rem; 
+    }
+}
+
+
+
+
+
+
