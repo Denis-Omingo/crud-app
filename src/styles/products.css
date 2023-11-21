@@ -15,12 +15,41 @@
         width: 100%; 
         overflow-x: auto; 
     }
+    .table th{
+        color: rgb(31, 250, 250);
+        font-size: 0.6rem;
+    }
 
     .table th,
     .table td {
-        font-size: 0.5rem; 
+        font-size: 0.6rem; 
     }
+   
+
+    .table .action-buttons {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+    }
+
+    .table .action-buttons button {
+        margin-right: 2rem;
+        margin-bottom: 2px;
+        font-size: .5rem;
+        padding-right: 25px;
+    }
+    
 }
+
+
+
+
+
+
+
+   
+
 
 
 

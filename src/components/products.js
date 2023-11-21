@@ -78,8 +78,8 @@ function ProductList(props){
                                     <td className=''>{product.category}</td>
                                     <td className='text-light'>Ksh. {product.price}</td>
                                     <td className=''>{product.instock}</td>
-                                    <td className='text-light'>{product.createdAt}</td>
-                                    <td style={{width:"10px", whiteSpace:"nowrap"}}>
+                                    <td className='text-light pe-1'>{product.createdAt}</td>
+                                    <td className='action-buttons' style={{width:"10px", whiteSpace:"nowrap"}}>
                                             <button onClick={()=>props.showForm(product)} type='button' className='btn btn-primary btn-sm me-2'>Edit</button>
                                             <button  onClick={()=>deleteProduct(product.id)} type='button' className='btn btn-danger btn-sm me-2'>Delete</button>
                                     </td> 
