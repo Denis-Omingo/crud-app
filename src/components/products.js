@@ -61,7 +61,7 @@ function ProductList(props){
                         <th className='pe-0'>Name</th>
                         <th className='pe-0'>Brand</th>
                         <th className='pe-0'>Category</th>
-                        <th className='pe-0'>Price/Unit</th>
+                        <th className='d-none d-md-inline-flex pe-0'>Price/Unit</th>
                         <th className='pe-0'>Available</th>
                         <th className='d-none d-md-inline-flex pe-0'>Date</th>
                         <th className='pe-0'>Action </th>
@@ -76,7 +76,7 @@ function ProductList(props){
                                     <td className='pe-0'>{product.name}</td>
                                     <td className='pe-0'>{product.brand}</td>
                                     <td className='pe-0'>{product.category}</td>
-                                    <td className='pe-0'>Ksh. {product.price}</td>
+                                    <td className='d-none d-md-inline-flex pe-0'>Ksh. {product.price}</td>
                                     <td className='pe-0'>{product.instock} units</td>
                                     <td className='d-none d-md-inline-flex pe-0'>{product.createdAt}</td>
                                     <td style={{width:"10px", whiteSpace:"nowrap"}}>
